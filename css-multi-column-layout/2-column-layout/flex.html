@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <style>
+    .hd, .aside, .main, .ft {
+      background: #F4F2F1;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .aside, .main {
+      min-height: 100px;
+    }
+
+    .bd {
+      margin: 10px 0;
+    }
+
+    /* -- 以下为核心代码 -- */
+
+    .bd {
+      display: flex;
+    }
+
+    .aside {
+      width: 200px;
+      margin-right: 10px; /* 10px 列间隙 */
+    }
+
+    .main {
+      flex: 1; /* 展开适应宽度 */
+    }
+  </style>
+</head>
+<body>
+  <div class="hd">Header</div>
+  <div class="bd">
+    <div class="aside">侧边栏 固定宽度</div>
+    <div class="main">主内容栏 自适应宽度</div>
+  </div>
+  <div class="ft">Footer</div>
+</body>
+</html>
